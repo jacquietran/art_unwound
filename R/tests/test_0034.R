@@ -88,4 +88,4 @@ p <- ggplot() +
 ggsave(
   here::here(glue::glue("img/{`iteration_id`}.png")),
   last_plot(), width = num_tiles * 10, height = num_tiles * 10,
-  units = "cm", dpi = 100)
+  units = "cm", dpi = 600)
