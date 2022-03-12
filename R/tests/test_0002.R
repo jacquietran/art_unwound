@@ -47,5 +47,5 @@ p <- ggplot() +
 # Export to file ---------------------------------------------------------------
 
 ggsave(
-  here::here(glue::glue("img/{`iteration_id`}.png")),
+  here::here(glue::glue("img/tests/{`iteration_id`}.png")),
   last_plot(), width = 10, height = 10, units = "cm", dpi = 300)
