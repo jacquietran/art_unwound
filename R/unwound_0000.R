@@ -62,10 +62,10 @@ p <- ggplot() +
     aes(x = x, y = y, group = group, fill = hex_fill),
     strength = 0.5, size = 0, alpha = 1, radius = unit(2, 'mm')) +
   scale_alpha_identity() +
-  geom_diagonal0(
+  geom_diagonal(
     data = diags,
     aes(x, y, xend = xend, yend = yend),
-    size = 0.5, colour = "#DADBE7") +
+    size = 0.5, colour = "#DADBE7", n = 500) +
   scale_fill_identity() +
   scale_colour_identity() +
   coord_fixed(xlim = c(1,10), ylim = c(1,10), expand = TRUE) +

@@ -56,11 +56,11 @@ p <- ggplot2::ggplot() +
     ggplot2::aes(x, y, fill = noise),
     alpha = 0.2) +
   ggplot2::scale_fill_gradientn(colours = noise_gradient) +
-  ggforce::geom_diagonal0(
+  ggforce::geom_diagonal(
     data = diags,
     ggplot2::aes(x, y, xend = xend, yend = yend),
     strength = end_points$strength, size = end_points$size,
-    colour = bg_colour) +
+    colour = bg_colour, n = 500) +
   ggplot2::scale_colour_identity() +
   ggplot2::coord_fixed(xlim = c(-1,12), ylim = c(-1,12), expand = FALSE) +
   ggplot2::theme_void() +
